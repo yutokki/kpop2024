@@ -1,8 +1,9 @@
+/* Ajoutons une police élégante et un fond nuancé */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1c1c1c; /* Fond noir nuancé gris */
+    background: linear-gradient(to bottom, #1c1c1c, #2a2a2a); /* Fond noir avec nuances de gris */
     color: #f5f5f5; /* Couleur du texte clair pour contraste */
 }
 
@@ -12,11 +13,13 @@ header {
     padding: 1rem;
     text-align: center;
     border-bottom: 2px solid #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ajoute une ombre */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -32,6 +35,10 @@ nav ul li a {
 
 main {
     padding: 2rem;
+    background-color: rgba(44, 44, 44, 0.8); /* Couleur de fond légèrement transparente */
+    border-radius: 8px;
+    margin: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ajoute une ombre */
 }
 
 .gallery {
@@ -47,6 +54,12 @@ main {
     padding: 1rem;
     width: calc(33.333% - 2rem);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour effet d'animation */
+}
+
+.photocard:hover {
+    transform: scale(1.05); /* Zoom au survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre plus prononcée au survol */
 }
 
 .photocard img {
@@ -57,6 +70,7 @@ main {
 .photocard p {
     margin-top: 0.5rem;
     font-size: 0.9rem;
+    color: #ccc; /* Texte légèrement gris */
 }
 
 #wishlist ul {
@@ -73,10 +87,15 @@ footer {
     bottom: 0;
     width: 100%;
     border-top: 2px solid #444;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5); /* Ajoute une ombre */
 }
 
 #filters {
     margin-bottom: 2rem;
+    background-color: rgba(44, 44, 44, 0.8); /* Fond légèrement transparent */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ajoute une ombre */
 }
 
 #filters label {
@@ -85,4 +104,10 @@ footer {
 
 #filters select {
     margin-right: 2rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ajoute une ombre */
 }
